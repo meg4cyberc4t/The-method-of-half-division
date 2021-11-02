@@ -21,8 +21,8 @@ def main():
 
     while True:
         middleX = (min + max) / 2
+        middleX = round(middleX, 3)
         middleY = solve(formula, middleX)
-        print(f"{middleX=}, {middleY=}")
         if middleY == 0:
             break
         if not vos and middleY < 0:
@@ -31,7 +31,10 @@ def main():
             min, max = min, middleX
         else: 
             min, max = middleX, max 
-        
 
+    
+    print(f"{middleX=}, {middleY=}")
+        
+    
 if __name__ == "__main__":
     main()
